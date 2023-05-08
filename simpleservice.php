@@ -48,7 +48,7 @@
 	//	as necessary. Thus there is no guarantee that the action will be performed at each
 	//	interval, only a best effort.
 	define('kRunInterval',
-  		   10.0);	    		//	FIXME 
+		   10.0);			//	FIXME 
 
 
 	//
@@ -60,7 +60,7 @@
 	//	back to the microsecods having the value ".000".
 	function _getTimestamp(): string
 	{
-		try {
+        try {
 			$d = new DateTimeImmutable();
 			return $d->format(DATE_RFC3339_EXTENDED);
 		}
@@ -71,7 +71,7 @@
 
 	//	Very primitive log function that outputs the message to stdout:
 	function logMsg(string $inMsg,
-	        				string $inPrefix=null): void
+					string $inPrefix=null): void
 	{
 		echo $inPrefix._getTimestamp().' '.$inMsg.PHP_EOL;
 	}
@@ -90,7 +90,7 @@
 	function fatalError(string $inErrorMsg): void
 	{
 		logMsg($inErrorMsg,
-		  	   '### FATAL ERROR: ');
+			   '### FATAL ERROR: ');
 		exit(1);
 	}
 
@@ -144,7 +144,7 @@
 			//	for a signal to be handled.
 			do {
 				$tt = min($targetTime,
-				    		  microtime(true) + 0.5);	//	Sleep for ≤0.5 seconds.
+						  microtime(true) + 0.5);	//	Sleep for ≤0.5 seconds.
 				//	Do not generate any E_WARNING because the actual time might be later
 				//	than the target time. This is a corner case that might happen very
 				//	occasionaly but we don't care.
@@ -155,7 +155,7 @@
 
 	//	This function is called when a signal has been recieved.
 	function _handleSignal(int $inSigno,
-				          		   $inSiginfo=null): void
+						   $inSiginfo=null): void
 	{
 		switch ($inSigno) {
 			case SIGTERM:
