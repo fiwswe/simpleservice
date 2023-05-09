@@ -125,7 +125,7 @@
 	//	of jitter is possible.
 	//	It can only be terminated by signaling the process.
 	//	Note: This function never returns!
-	function runAction(): void
+	function runAction(float $inRunInterval): void
 	{
 		logMsg('Start.');
 		//	Note the current time:
@@ -136,7 +136,7 @@
 			doAction();
 			//	Find the next time to run:
 			do {
-				$targetTime += kRunInterval;
+				$targetTime += $inRunInterval;
 			} while ($targetTime < microtime(true));
 			//	Wait until that time:
 			//	But sleep in small steps so that the script can be interrupted by a
@@ -201,5 +201,5 @@
 	//
 
 	setupSignalHandlers();
-	runAction();	//	Never returns.
+	runAction(kRunInterval);	//	Never returns.
 ?>
