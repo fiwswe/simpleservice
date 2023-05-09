@@ -196,17 +196,17 @@
 	}
 
 
-	//	Local Variables:
-	//	tab-width: 4
-	//	End:
-
-
 	//
 	//	MARK: Main code
 	//
 
 	setupSignalHandlers();
 	runAction(kRunInterval);	//	Never returns.
+
+
+	//	Local Variables:
+	//	tab-width: 4
+	//	End:
 
 
 	//
