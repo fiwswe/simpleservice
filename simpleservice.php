@@ -202,4 +202,9 @@
 
 	setupSignalHandlers();
 	runAction(kRunInterval);	//	Never returns.
+
+
+	//
+	//	EOF.
+	//
 ?>
