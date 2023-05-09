@@ -35,7 +35,7 @@
 	//	PHP (version ≥7.4, lower version may also work)
 	//	PHP extension pcntl
 	//
-	//	This code was tested with PHP 8.2.5, 8.1.18, 8.0.28 and 7.4.33  on OpenBSD 7.3.
+	//	This code was tested with PHP 8.2.5, 8.1.18, 8.0.28 and 7.4.33 on OpenBSD 7.3.
 
 	//
 	//	MARK: Constants
